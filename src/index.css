@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 23% 95%;
+    --foreground: 220 9% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 9% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 9% 9%;
+    --primary: 263 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 13% 91%;
+    --secondary-foreground: 220 9% 9%;
+    --muted: 220 13% 91%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 220 13% 91%;
+    --accent-foreground: 220 9% 9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 87%;
+    --input: 220 13% 87%;
+    --ring: 263 70% 50%;
+    --radius: 0.5rem;
+    
+    /* Business theme colors */
+    --business-primary: 263 70% 50%;
+    --business-secondary: 220 70% 50%;
+    
+    /* Status colors */
+    --success: 142 71% 45%;
+    --warning: 45 93% 47%;
+    --info: 217 91% 60%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(263 70% 50%), hsl(263 70% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 70% 50%), hsl(220 70% 60%));
+    --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 55%));
+    
+    /* Shadows */
+    --shadow-primary: 0 10px 30px -10px hsl(263 70% 50% / 0.3);
+    --shadow-card: 0 4px 12px -2px hsl(220 9% 9% / 0.1);
+    --shadow-glow: 0 0 40px hsl(263 70% 50% / 0.15);
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 9% 9%;
+    --sidebar-primary: 263 70% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 13% 91%;
+    --sidebar-accent-foreground: 220 9% 9%;
+    --sidebar-border: 220 13% 87%;
+    --sidebar-ring: 263 70% 50%;
+  }
+
+  .dark {
+    --background: 220 23% 6%;
+    --foreground: 220 9% 91%;
+    --card: 220 23% 8%;
+    --card-foreground: 220 9% 91%;
+    --popover: 220 23% 8%;
+    --popover-foreground: 220 9% 91%;
+    --primary: 263 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 220 9% 91%;
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 9% 65%;
+    --accent: 220 13% 15%;
+    --accent-foreground: 220 9% 91%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 263 70% 50%;
+    
+    /* Business theme colors for dark mode */
+    --business-primary: 263 70% 60%;
+    --business-secondary: 220 70% 60%;
+    
+    /* Status colors for dark mode */
+    --success: 142 71% 55%;
+    --warning: 45 93% 57%;
+    --info: 217 91% 70%;
+    
+    /* Gradients for dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(263 70% 50%), hsl(263 70% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 70% 50%), hsl(220 70% 70%));
+    --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 65%));
+    
+    /* Shadows for dark mode */
+    --shadow-primary: 0 10px 30px -10px hsl(263 70% 50% / 0.4);
+    --shadow-card: 0 4px 12px -2px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(263 70% 50% / 0.25);
+    
+    /* Sidebar for dark mode */
+    --sidebar-background: 220 23% 4%;
+    --sidebar-foreground: 220 9% 91%;
+    --sidebar-primary: 263 70% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 13% 15%;
+    --sidebar-accent-foreground: 220 9% 91%;
+    --sidebar-border: 220 13% 20%;
+    --sidebar-ring: 263 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
